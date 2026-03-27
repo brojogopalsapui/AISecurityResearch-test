@@ -3502,3 +3502,55 @@ iframe {
     min-width: 560px !important;
   }
 }
+
+
+/* ---------------------------------------------------------
+   DARK VIEW: deeper black surface refinement
+   --------------------------------------------------------- */
+body.portal-page .content-card,
+body.portal-page .panel,
+body.portal-page .post-card,
+body.portal-page .quick-card,
+body.portal-page .feature-card,
+body.portal-page .topic-card,
+body.portal-page .foundation-card,
+body.portal-page .section-card,
+body.portal-page .info-card,
+body.portal-page .watch-card,
+body.portal-page .profile-card,
+body.portal-page .faq-card,
+body.portal-page .toc,
+body.portal-page .cta,
+body.portal-page .portal-visual,
+body.portal-page .pulse-card,
+body.portal-page .metric-card,
+body.portal-page .resource-card,
+body.portal-page .watch-note,
+body.portal-page .accordion{
+  background: linear-gradient(180deg, rgba(10,16,27,.97), rgba(4,8,15,.985)) !important;
+  border: 1px solid rgba(151,190,255,.16) !important;
+  box-shadow: 0 24px 56px rgba(0,0,0,.34), 0 0 0 1px rgba(83,229,246,.04) !important;
+}
+
+body.portal-page .content-card:hover,
+body.portal-page .panel:hover,
+body.portal-page .post-card:hover,
+body.portal-page .quick-card:hover,
+body.portal-page .feature-card:hover,
+body.portal-page .topic-card:hover,
+body.portal-page .foundation-card:hover,
+body.portal-page .section-card:hover,
+body.portal-page .info-card:hover,
+body.portal-page .watch-card:hover,
+body.portal-page .profile-card:hover,
+body.portal-page .faq-card:hover,
+body.portal-page .toc:hover,
+body.portal-page .cta:hover,
+body.portal-page .portal-visual:hover,
+body.portal-page .pulse-card:hover,
+body.portal-page .metric-card:hover,
+body.portal-page .resource-card:hover,
+body.portal-page .watch-note:hover,
+body.portal-page .accordion:hover{
+  border-color: rgba(151,190,255,.24) !important;
+}

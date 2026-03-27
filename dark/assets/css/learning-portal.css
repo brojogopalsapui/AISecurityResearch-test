@@ -615,3 +615,65 @@ details .answer{margin-top:.8rem}
 }
 
 
+
+
+/* ---------------------------------------------------------
+   DARK VIEW: deeper black surface refinement
+   --------------------------------------------------------- */
+body{
+  background:
+    radial-gradient(circle at 8% 10%, rgba(91, 140, 255, .16), transparent 24%),
+    radial-gradient(circle at 92% 8%, rgba(83, 229, 246, .10), transparent 20%),
+    linear-gradient(135deg, #223350 0%, #2d4264 42%, #37527a 72%, #273852 100%);
+}
+
+.site-header{
+  background: rgba(17, 26, 41, .78);
+  border-bottom: 1px solid rgba(151,190,255,.14);
+}
+
+.portal-visual,
+.card,
+.quick-card,
+.feature-card,
+.info-card,
+.watch-card,
+.faq-card,
+.panel,
+.footer-panel,
+.profile-card,
+.support-card,
+.topic-card,
+.foundation-card,
+.pulse-card{
+  background: linear-gradient(180deg, rgba(10,16,27,.97), rgba(4,8,15,.985));
+  border: 1px solid rgba(151,190,255,.16);
+  box-shadow: 0 22px 56px rgba(0,0,0,.34), 0 0 0 1px rgba(83,229,246,.04);
+}
+
+.portal-copy p,
+.topic-card p,
+.foundation-card p,
+.pulse-card p,
+.info-card p,
+.watch-card p,
+.faq-card p,
+.panel p,
+.profile-card p,
+.support-card p,
+.quick-card p,
+.feature-card p{
+  color: #d8e8fb;
+}
+
+.topic-card h3,
+.foundation-card h3,
+.pulse-card h3,
+.panel h2,
+.panel h3,
+.quick-card h3,
+.feature-card h3,
+.profile-card h3,
+.support-card h3{
+  color: #f7fbff;
+}
