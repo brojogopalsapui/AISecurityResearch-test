@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your new weekly research note title | Brojogopal Sapui</title>
+  <meta name="description" content="Write a short 2-3 line preview explaining the key shift, tension, or technical direction." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html" aria-label="Brojogopal Sapui Home">B<span>S</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../research.html">Research</a>
+        <a href="../ongoing-work.html">Trending Topics</a>
+        <a href="../publications.html">Resources</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Research Watch • March 2026</span>
+        <h1>Your new weekly research note title</h1>
+        <p class="lead">Write a short 2-3 line preview explaining the key shift, tension, or technical direction.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="content-card">
+          <span class="kicker">Overview</span>
+          <h2>What is changing</h2>
+          <p>Modern LLM agents interact with untrusted environments, making them inherently vulnerable to prompt injection attacks. Traditional defenses rely on better prompting or model alignment, but these approaches lack guarantees. CaMeL proposes a fundamentally different direction: instead of fixing the model, it secures the system layer by isolating control flow from untrusted data.</p>
+          <p>Technically, CaMeL introduces capability-based security with explicit tracking of data provenance and enforcement of security policies during execution. By extracting a structured control flow and enforcing policies via a custom interpreter, the system prevents adversarial manipulation of tool arguments—even when underlying models are vulnerable. This reframes LLM security as a systems problem rather than a learning problem.</p>
+        </div>
+
+        <div class="content-card">
+          <span class="kicker">Why it matters</span>
+          <h2>Research significance</h2>
+          <ul class="check-list">
+              <li>• Shift from prompt-level defenses to system-level enforcement</li>
+              <li>• Explicit separation of control flow and data flow in agent execution</li>
+              <li>• Introduction of capability-based policies for fine-grained control</li>
+              <li>• Movement toward interpretable and enforceable AI execution environments</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Discussion</span>
+          <h2>What reviewers should notice</h2>
+          <p>
+            These review points help separate benchmark-level claims from stronger system-level conclusions.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <ul class="check-list">
+              <li>• Whether the threat model realistically captures agentic deployments</li>
+              <li>• Whether evaluation includes real tool-calling environments</li>
+              <li>• Whether guarantees hold beyond benchmark scenarios</li>
+              <li>• Whether overhead and usability tradeoffs are acceptable</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="content-card">
+          <span class="kicker">Current research tension</span>
+          <h2>Why this topic matters now</h2>
+          <p>Strong security guarantees in LLM agents increasingly require sacrificing model autonomy and flexibility, raising a fundamental tradeoff between capability and control.</p>
+          <div class="btn-row" style="margin-top:1rem;"><a href="ai-security/related-page.html">Related static page</a> <a href="https://example.com" rel="noopener noreferrer" target="_blank">External reference 1</a> <a href="https://example.com" rel="noopener noreferrer" target="_blank">External reference 2</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <span class="eyebrow">Next Step</span>
+            <h2>Back to ongoing research updates</h2>
+            <p>
+              Return to the running list of research-watch topics and evolving system-level notes.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="../ongoing-work.html#2026-03-prompt-injection-defense">Back to this note</a>
+            <a class="btn btn-secondary" href="../research.html">Research</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Brojogopal Sapui</h3>
+        <p>AI Security• Hardware Trust • Edge/Physical AI</p>
+      </div>
+      <div>
+        <h4>Main Pages</h4>
+        <a href="../research.html">Research</a>
+        <a href="../ongoing-work.html">Trending Topics</a>
+        <a href="../publications.html">Resources</a>
+      </div>
+      <div>
+        <h4>Focus</h4>
+        <p>Cross-layer AI security, trustworthy deployment, hardware-aware defense, and physical intelligence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
