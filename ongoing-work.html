@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -13,7 +15,7 @@
 <body class="subpage">
 <header class="site-header">
 <div class="container nav-wrap">
-<div class="brand-group"><a aria-label="Brojogopal Sapui Home" class="brand" href="index.html">B<span>S</span></a><a class="brand-hint" href="https://brojogopalsapui.github.io/" target="_blank" rel="noopener noreferrer">Mobile View (Dark)</a></div>
+<div class="brand-group"><a aria-label="Brojogopal Sapui Home" class="brand" href="index.html">B<span>S</span></a><a class="brand-hint" href="https://brojogopalsapui.github.io/" rel="noopener noreferrer" target="_blank">Mobile View (Dark)</a></div>
 <nav class="nav">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -68,7 +70,7 @@
 <span class="pulse-link">Jump to stream</span>
 </a>
 </div>
-        <!--
+<!--
           ======================================================================
           INTERNAL MAINTENANCE GUIDE - AI SECURITY PULSE SECTION
           ======================================================================
@@ -146,7 +148,7 @@
           and emerging design tensions. The goal is not to summarize everything, but to make the key shift in the field clear
           and explain why it matters for how AI systems are actually being built.
         </p>
-        <!--
+<!--
           ======================================================================
           INTERNAL MAINTENANCE GUIDE - WATCH STACK (MANUAL OR NOTEBOOK WORKFLOW)
           ======================================================================
@@ -217,7 +219,52 @@
           </article>
         -->
 <div class="watch-stack">
-<article class="watch-note accordion" id="2026-03-embodied-ai-security-governance">
+
+<article class="watch-note accordion" id="2026-03-prompt-injection-defense">
+<button aria-expanded="false" class="accordion-trigger" type="button">
+<span class="accordion-meta">Research Watch • Your Topic • 2026 signal</span>
+<span class="accordion-title">Your new weekly research note title</span>
+<span class="accordion-preview">
+      Write a short 2-3 line preview explaining the key shift, tension, or technical direction.
+    </span>
+<span class="accordion-cta">Read full note</span>
+<span aria-hidden="true" class="accordion-icon"></span>
+</button>
+<div aria-hidden="true" class="accordion-panel">
+<div class="accordion-panel-inner">
+<p>Modern LLM agents interact with untrusted environments, making them inherently vulnerable to prompt injection attacks. Traditional defenses rely on better prompting or model alignment, but these approaches lack guarantees. CaMeL proposes a fundamentally different direction: instead of fixing the model, it secures the system layer by isolating control flow from untrusted data.</p>
+<p>Technically, CaMeL introduces capability-based security with explicit tracking of data provenance and enforcement of security policies during execution. By extracting a structured control flow and enforcing policies via a custom interpreter, the system prevents adversarial manipulation of tool arguments—even when underlying models are vulnerable. This reframes LLM security as a systems problem rather than a learning problem.</p>
+<div class="watch-columns">
+<div class="watch-block">
+<h4>What is changing technically</h4>
+<ul>
+<li>• Shift from prompt-level defenses to system-level enforcement</li>
+<li>• Explicit separation of control flow and data flow in agent execution</li>
+<li>• Introduction of capability-based policies for fine-grained control</li>
+<li>• Movement toward interpretable and enforceable AI execution environments</li>
+</ul>
+</div>
+<div class="watch-block">
+<h4>What reviewers should notice</h4>
+<ul>
+<li>• Whether the threat model realistically captures agentic deployments</li>
+<li>• Whether evaluation includes real tool-calling environments</li>
+<li>• Whether guarantees hold beyond benchmark scenarios</li>
+<li>• Whether overhead and usability tradeoffs are acceptable</li>
+</ul>
+</div>
+</div>
+<div class="watch-bottom-note">
+<strong>Current research tension:</strong> Strong security guarantees in LLM agents increasingly require sacrificing model autonomy and flexibility, raising a fundamental tradeoff between capability and control.
+      </div>
+<div class="watch-inline-links">
+<a href="posts/2026-03-prompt-injection-defense.html">Read full post</a> <a href="ai-security/related-page.html">Related static page</a> <a href="https://example.com" rel="noopener noreferrer" target="_blank">External reference 1</a> <a href="https://example.com" rel="noopener noreferrer" target="_blank">External reference 2</a>
+</div>
+</div>
+</div>
+</article>
+
+          <article class="watch-note accordion" id="2026-03-embodied-ai-security-governance">
 <button aria-expanded="false" class="accordion-trigger" type="button">
 <span class="accordion-meta">Research Watch • Embodied AI Security Governance • 2026 signal</span>
 <span class="accordion-title">Embodied AI Security Is No Longer Just a Model Problem</span>
