@@ -7,6 +7,8 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -226,8 +228,50 @@
         -->
 <div class="watch-stack">
 
+<article class="watch-note accordion" id="2026-03-ai-assisted-sca-nn-recovery">
+<button aria-expanded="false" class="accordion-trigger" type="button">
+<span class="accordion-meta">Research Watch • 2026 03 Ai Assisted Sca Nn Recovery • 2026 signal</span>
+<span class="accordion-title">2026 03 Ai Assisted Sca Nn Recovery</span>
+<span class="accordion-preview">
+</span>
+<span class="accordion-cta">Read full note</span>
+<span aria-hidden="true" class="accordion-icon"></span>
+</button>
+<div aria-hidden="true" class="accordion-panel">
+<div class="accordion-panel-inner">
+<p>This work demonstrates that neural network accelerators, even highly optimized commercial designs like NVDLA, leak significant architectural information through power and timing side channels. By capturing execution traces and training AI-based attack models, the authors show that it is possible to reconstruct key structural components of neural networks, including layer types, kernel sizes, and execution patterns. This fundamentally challenges the assumption that hardware accelerators inherently protect model intellectual property, especially in edge deployments where physical access is realistic.</p>
+<p>Technically, the attack combines Simple Power Analysis (SPA) and timing leakage with a CNN-based inference pipeline to automate architecture recovery. Despite pipelined execution, parallelism, and OS-level noise, distinct leakage signatures emerge for convolution, pooling, and fully connected layers. The study shows that hyperparameters such as kernel size, stride, padding, and parallel execution width produce measurable differences in execution time and power amplitude. Importantly, the attack operates under a realistic threat model—no access to weights or internal states—highlighting that even partial leakage is sufficient for high-confidence model reconstruction.</p>
+<div class="watch-columns">
+<div class="watch-block">
+<h4>What is changing technically</h4>
+<ul>
+<li>Neural network architecture is no longer opaque; side-channel leakage exposes structural information directly.</li>
+<li>Parallel and pipelined accelerator designs do not eliminate leakage, but instead create identifiable execution patterns.</li>
+<li>AI is now used as an attacker tool to interpret noisy physical signals and automate model extraction.</li>
+<li>Hardware-level execution characteristics (timing, power amplitude, batching) become new attack surfaces in AI systems.</li>
+</ul>
+</div>
+<div class="watch-block">
+<h4>What reviewers should notice</h4>
+<ul>
+<li>Whether the threat model assumes realistic physical access and deployment conditions.</li>
+<li>Whether evaluation captures full-system noise (OS activity, memory transfer, parallel execution).</li>
+<li>Whether leakage interpretation is automated or relies on manual inspection.</li>
+<li>Whether the attack generalizes beyond specific models like LeNet to larger architectures.</li>
+</ul>
+</div>
+</div>
+<div class="watch-bottom-note">
+<strong>Current research tension:</strong> Hardware acceleration improves efficiency but unintentionally amplifies structured leakage, creating a fundamental tension between performance optimization and model confidentiality.
+      </div>
+<div class="watch-inline-links">
+<a href="posts/2026-03-ai-assisted-sca-nn-recovery.html">Read full post</a>
+</div>
+</div>
+</div>
+</article>
 
-<article class="watch-note accordion" id="2026-03-prompt-injection-defense">
+          <article class="watch-note accordion" id="2026-03-prompt-injection-defense">
 <button aria-expanded="false" class="accordion-trigger" type="button">
 <span class="accordion-meta">Research Watch • Your Topic • 2026 signal</span>
 <span class="accordion-title">Your new weekly research note title</span>
@@ -270,8 +314,7 @@
 </div>
 </div>
 </article>
-
-          <article class="watch-note accordion" id="2026-03-embodied-ai-security-governance">
+<article class="watch-note accordion" id="2026-03-embodied-ai-security-governance">
 <button aria-expanded="false" class="accordion-trigger" type="button">
 <span class="accordion-meta">Research Watch • Embodied AI Security Governance • 2026 signal</span>
 <span class="accordion-title">Embodied AI Security Is No Longer Just a Model Problem</span>

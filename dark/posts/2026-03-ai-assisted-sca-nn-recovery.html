@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 03 Ai Assisted Sca Nn Recovery | Brojogopal Sapui</title>
+  <meta name="description" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html" aria-label="Brojogopal Sapui Home">B<span>S</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../research.html">Research</a>
+        <a href="../ongoing-work.html">Trending Topics</a>
+        <a href="../publications.html">Resources</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Research Watch • March 2026</span>
+        <h1>2026 03 Ai Assisted Sca Nn Recovery</h1>
+        <p class="lead"></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="content-card">
+          <span class="kicker">Overview</span>
+          <h2>What is changing</h2>
+          <p>This work demonstrates that neural network accelerators, even highly optimized commercial designs like NVDLA, leak significant architectural information through power and timing side channels. By capturing execution traces and training AI-based attack models, the authors show that it is possible to reconstruct key structural components of neural networks, including layer types, kernel sizes, and execution patterns. This fundamentally challenges the assumption that hardware accelerators inherently protect model intellectual property, especially in edge deployments where physical access is realistic.</p>
+          <p>Technically, the attack combines Simple Power Analysis (SPA) and timing leakage with a CNN-based inference pipeline to automate architecture recovery. Despite pipelined execution, parallelism, and OS-level noise, distinct leakage signatures emerge for convolution, pooling, and fully connected layers. The study shows that hyperparameters such as kernel size, stride, padding, and parallel execution width produce measurable differences in execution time and power amplitude. Importantly, the attack operates under a realistic threat model—no access to weights or internal states—highlighting that even partial leakage is sufficient for high-confidence model reconstruction.</p>
+        </div>
+
+        <div class="content-card">
+          <span class="kicker">Why it matters</span>
+          <h2>Research significance</h2>
+          <ul class="check-list">
+              <li>Neural network architecture is no longer opaque; side-channel leakage exposes structural information directly.</li>
+              <li>Parallel and pipelined accelerator designs do not eliminate leakage, but instead create identifiable execution patterns.</li>
+              <li>AI is now used as an attacker tool to interpret noisy physical signals and automate model extraction.</li>
+              <li>Hardware-level execution characteristics (timing, power amplitude, batching) become new attack surfaces in AI systems.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Discussion</span>
+          <h2>What reviewers should notice</h2>
+          <p>
+            These review points help separate benchmark-level claims from stronger system-level conclusions.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <ul class="check-list">
+              <li>Whether the threat model assumes realistic physical access and deployment conditions.</li>
+              <li>Whether evaluation captures full-system noise (OS activity, memory transfer, parallel execution).</li>
+              <li>Whether leakage interpretation is automated or relies on manual inspection.</li>
+              <li>Whether the attack generalizes beyond specific models like LeNet to larger architectures.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="content-card">
+          <span class="kicker">Current research tension</span>
+          <h2>Why this topic matters now</h2>
+          <p>Hardware acceleration improves efficiency but unintentionally amplifies structured leakage, creating a fundamental tension between performance optimization and model confidentiality.</p>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <span class="eyebrow">Next Step</span>
+            <h2>Back to ongoing research updates</h2>
+            <p>
+              Return to the running list of research-watch topics and evolving system-level notes.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="../ongoing-work.html#2026-03-ai-assisted-sca-nn-recovery">Back to this note</a>
+            <a class="btn btn-secondary" href="../research.html">Research</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Brojogopal Sapui</h3>
+        <p>AI Security• Hardware Trust • Edge/Physical AI</p>
+      </div>
+      <div>
+        <h4>Main Pages</h4>
+        <a href="../research.html">Research</a>
+        <a href="../ongoing-work.html">Trending Topics</a>
+        <a href="../publications.html">Resources</a>
+      </div>
+      <div>
+        <h4>Focus</h4>
+        <p>Cross-layer AI security, trustworthy deployment, hardware-aware defense, and physical intelligence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
