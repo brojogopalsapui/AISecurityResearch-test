@@ -37,7 +37,7 @@ def patch_dark_brand_hints() -> None:
         root_index = ('../' * depth) + 'index.html' if depth > 0 else 'index.html'
         text = html.read_text(encoding='utf-8')
         text = text.replace('href="dark/index.html">Mobile View (Dark)</a>', f'href="{root_index}">Light View</a>')
-        text = text.replace('href="https://brojogopalsapui.github.io/AISecurityResearch-test/dark/AISecurityResearch-test/dark/" target="_blank" rel="noopener noreferrer">Mobile View (Dark)</a>', f'href="{root_index}">Light View</a>')
+        text = text.replace('href="https://brojogopalsapui.github.io/" target="_blank" rel="noopener noreferrer">Mobile View (Dark)</a>', f'href="{root_index}">Light View</a>')
         html.write_text(text, encoding='utf-8')
 
 
