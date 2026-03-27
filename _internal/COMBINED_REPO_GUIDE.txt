@@ -1,0 +1,15 @@
+COMBINED REPO QUICK GUIDE
+
+1) Root pages are the main site.
+2) /dark/ contains the second site path.
+3) After any content update, run:
+   python scripts/sync_dual_site.py
+4) Then commit and push.
+5) Open the two versions at:
+   /           main site
+   /dark/      second site path
+
+If you later keep separate dark-only CSS:
+- edit dark/assets/css/learning-portal.css
+- edit dark/assets/css/style.css
+- keep using the sync script after notebook updates
