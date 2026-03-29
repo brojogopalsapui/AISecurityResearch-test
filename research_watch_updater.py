@@ -45,6 +45,51 @@ def sanitize_slug(text: str) -> str:
     return text or 'research-note'
 
 
+
+
+def parse_key_value_paragraphs(doc) -> dict[str, str]:
+    metadata: dict[str, str] = {}
+    for p in doc.paragraphs[:20]:
+        text = _clean(p.text)
+        if not text or ':' not in text:
+            continue
+        key, value = text.split(':', 1)
+        key = _clean(key)
+        value = _clean(value)
+        if key and value:
+            metadata[key] = value
+    return metadata
+
+
+def infer_category(docx_path: Path, metadata: dict) -> str:
+    raw = _clean(metadata.get('Category'))
+    if not raw:
+        stem = docx_path.stem.lower()
+        if stem.startswith('academic-'):
+            raw = 'Academic'
+        elif stem.startswith('industry-'):
+            raw = 'Industry'
+        elif stem.startswith('company-release-'):
+            raw = 'Company & Release'
+
+    normalized = raw.lower()
+    if 'academic' in normalized:
+        return 'Academic'
+    if 'industry' in normalized:
+        return 'Industry'
+    if 'company' in normalized or 'release' in normalized or 'ecosystem' in normalized:
+        return 'Company & Release'
+    return raw or 'Academic'
+
+
+def category_to_stream_anchor(category: str) -> str:
+    normalized = _clean(category).lower()
+    if 'industry' in normalized:
+        return 'industry-innovation'
+    if 'company' in normalized or 'release' in normalized or 'ecosystem' in normalized:
+        return 'companies-releases'
+    return 'academic-signals'
+
 def ensure_dated_stem(stem: str, fallback_title: str = '') -> str:
     stem = _clean(stem)
     if DATE_STEM_RE.match(stem):
@@ -71,7 +116,7 @@ def detect_doctype(html_text: str) -> str:
 
 def parse_weekly_docx(path: Path) -> dict:
     doc = Document(str(path))
-    data = {'metadata': {}}
+    data = {'metadata': parse_key_value_paragraphs(doc)}
 
     if doc.tables:
         table = doc.tables[0]
@@ -161,6 +206,18 @@ def normalize_docx_data(data: dict, docx_path: Path, force_filename_post_id: boo
     if not _clean(md.get('Meta Line')):
         md['Meta Line'] = f"Research Watch • {md['Title']} • 2026 signal"
         warnings.append('Meta Line was blank in the DOCX, so one was inferred.')
+
+    md['Category'] = infer_category(docx_path, md)
+    stream_anchor = category_to_stream_anchor(md['Category'])
+    if not _clean(md.get('Related Static Page (optional)')):
+        md['Related Static Page (optional)'] = f'../ongoing-work.html#{stream_anchor}'
+    if not _clean(md.get('Related Static Page Label (optional)')):
+        if stream_anchor == 'academic-signals':
+            md['Related Static Page Label (optional)'] = 'Academic stream'
+        elif stream_anchor == 'industry-innovation':
+            md['Related Static Page Label (optional)'] = 'Industry stream'
+        else:
+            md['Related Static Page Label (optional)'] = 'Companies & Releases stream'
 
     if not _clean(data.get('Preview')) and _clean(md.get('Preview')):
         data['Preview'] = _clean(md.get('Preview'))
